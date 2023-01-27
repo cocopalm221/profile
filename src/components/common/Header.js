@@ -9,29 +9,31 @@ Link 컴포넌트를 이용하면 컴포넌트 갱신(spa)
 const Header = () => {
   return (
     <header>
-      <h1>
-        <Link to="/">logo</Link>
-      </h1>
-      <ul>
-        <li>
-          <Link to="/department">Department</Link>
-        </li>
-        <li>
-          <Link to="/community">Community</Link>
-        </li>
-        <li>
-          <Link to="/gallery">Gallery</Link>
-        </li>
-        <li>
-          <Link to="/youtube">Youtube</Link>
-        </li>
-        <li>
-          <Link to="/lacotion">Location</Link>
-        </li>
-        <li>
-          <Link to="/join">Join</Link>
-        </li>
-      </ul>
+      <div className="inner">
+        <h1>
+          <Link to="/">logo</Link>
+        </h1>
+        <ul id="gnb">
+          <li>
+            <Link to="/department">Department</Link>
+          </li>
+          <li>
+            <Link to="/community">Community</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/youtube">Youtube</Link>
+          </li>
+          <li>
+            <Link to="/lacotion">Location</Link>
+          </li>
+          <li>
+            <Link to="/join">Join</Link>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 };
