@@ -17,23 +17,18 @@ function App() {
   return (
     <>
       <Header />
-      {/* 화면별 Link에 의해 출력 될 단위 */}
+
       <Route exact path="/">
         <Visual />
         <Content />
       </Route>
-      {/* 화면별 Link에 의해 출력 될 단위 */}
-      <Route path="/department">
-        <Department />
-      </Route>
 
-      {/* 인라인 방식의 Route 적용 */}
       <Route path="/department" component={Department} />
       <Route path="/community" component={Community} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/youtube" component={Youtube} />
-      <Route path="/join" component={Join} />
       <Route path="/lacotion" component={Location} />
+      <Route path="/join" component={Join} />
 
       <Footer />
     </>
