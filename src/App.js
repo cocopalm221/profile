@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 //common
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
@@ -16,12 +16,20 @@ import Location from "./components/sub/Location";
 function App() {
   return (
     <>
-      <Header />
+      {/* 화면에 중첩되는 컴포넌트가 있는 경우 Switch를 활용한다. */}
+      <Switch>
+        <Route exact path="/">
+          {/* 라우터 값에 따라서 header props로 type="main" 전달 */}
+          <Header type={"main"} />
+          <Visual />
+          <Content />
+        </Route>
 
-      <Route exact path="/">
-        <Visual />
-        <Content />
-      </Route>
+        {/* 라우터에 따라서 header의 css를 다르게 함 */}
+        {/* 중첩되는 header에 대한 처리가 필요함 */}
+        {/* <header type={"sub"} /> */}
+        <Route path="/" render={() => <header type={"sub"} />} />
+      </Switch>
 
       <Route path="/department" component={Department} />
       <Route path="/community" component={Community} />

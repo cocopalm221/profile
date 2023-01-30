@@ -1,7 +1,7 @@
 import React from "react";
 
 const Visual = () => {
-  return <div>Visual</div>;
+  return <div id="visual">Visual</div>;
 };
 
 export default Visual;
