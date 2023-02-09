@@ -167,6 +167,12 @@ const Join = () => {
     }
     return errs;
   };
+  //데이터 초기화
+  const handleReset = () => {
+    setVal(initVal);
+    setErr({});
+  };
+
   // 디버깅용
   useEffect(() => {
     console.log(val);
@@ -438,7 +444,7 @@ const Join = () => {
               <tr>
                 <th colSpan="2">
                   {/* <button type="button">전송</button> */}
-                  <input type="reset" value="RESET" />
+                  <input type="reset" onClick={handleReset} value="RESET" />
                   <input type="submit" value="SUBMIT" />
                 </th>
               </tr>
