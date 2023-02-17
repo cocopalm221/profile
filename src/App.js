@@ -13,8 +13,11 @@ import Youtube from "./components/sub/Youtube";
 import Join from "./components/sub/Join";
 import Location from "./components/sub/Location";
 import Schedule from "./components/sub/Schedule";
+import Login from "./components/sub/Login";
+import Logout from "./components/sub/Logout";
 
 function App() {
+  
   return (
     <>
       {/* 화면에 중첩되는 컴포넌트가 있는 경우 Switch를 활용한다. */}
@@ -39,6 +42,8 @@ function App() {
       <Route path="/youtube" component={Youtube} />
       <Route path="/lacotion" component={Location} />
       <Route path="/join" component={Join} />
+      <Route path="/login" component={Login} />
+      <Route path="/logout" component={Logout} />
 
       <Footer />
     </>
